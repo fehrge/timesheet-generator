@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +12,5 @@ use Illuminate\Http\Request;
 */
 
 
-//Route::post('/timesheet/generate', 'TimesheetController@generate');
 Route::post('/timesheet/preview', 'TimesheetController@preview');
 Route::post('/timesheet/download', 'TimesheetController@download');

@@ -8,12 +8,6 @@ use Mpdf\Mpdf;
 
 class TimesheetController extends Controller
 {
-    
-	public function generate(Request $request)
-	{
-		// TODO save and get download
-		return response()->json(['success' => true]);
-	}
 
 	public function preview(Request $request)
 	{
@@ -27,7 +21,6 @@ class TimesheetController extends Controller
         $data = $request->input();
 
 		$html = view('timesheet', $data);
-		//return $html;
 
 		$mpdf = new Mpdf(['format' => 'Letter-L', 'margin_top' => 10, 'margin_bottom' => 10]);
 		$mpdf->WriteHTML($html);

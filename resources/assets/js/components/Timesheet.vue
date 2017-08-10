@@ -62,7 +62,7 @@
 
             var datepicker = new Pikaday({
                 field: document.getElementById('start_date'),
-                format: 'MMMM, D YYYY',
+                format: 'MMMM D, YYYY',
                 onSelect: (date) => {
                     this.$data.form.date = datepicker.toString();
                 }
